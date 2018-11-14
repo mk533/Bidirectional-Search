@@ -77,7 +77,7 @@ void Graph::BDS(int s, int t){
     BFS(&s_queue, s_visited, s_prev);
     //from back
     BFS(&t_queue, t_visited, t_prev);
-      cout<<"Mani at line 80";
+    //  cout<<"Mani at line 80";
     meet_pt = visitedIntersect(s_visited, t_visited);
     if(meet_pt != -1)
     {
@@ -112,7 +112,7 @@ void Graph::displayPathBDS(int s, int t, int *s_prev,int *t_prev, int m_pt)
   cout<<"\nPath is: ";
   int count = 2;
   prev = s_prev;
-    cout<<"Mani at line 114";
+   // cout<<"Mani at line 114";
   while(count-->0)
   {
     p = m_pt;
@@ -154,7 +154,7 @@ void Graph::displayQueue(list<int> queue)
 
 int main()
 {
-  cout<<"Mani at line 154";
+ // cout<<"Mani at line 154";
   int n = 16;
   Graph g(n);
   g.addEdge(0, 1, 12);
