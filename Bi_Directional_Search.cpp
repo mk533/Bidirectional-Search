@@ -1,5 +1,6 @@
-/*  Applies BFS from both source and destination side and checks after each iteration if the visited list from each side are intersecting at any point. If yes, then thats the meeting point and gives the
-   path from source to that point and from that point to destination. */
+/*  Applies BFS from both source and destination side and checks after each iteration ,
+if the visited list from each side are intersecting at any point. If yes, then thats the meeting point and gives
+the path from source to that point and from that point to destination. */
 
 #include<iostream>
 #include<vector>
