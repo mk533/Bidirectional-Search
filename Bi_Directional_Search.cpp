@@ -1,12 +1,12 @@
-//Applies BFS from both source and destination side and checks after each iteration if the visited
-//list from each side are intersecting at any point. If yes, then thats the meeting point and gives the
-//path from source to that point and from that point to destination
+/* Step 1:- Applies BFS from both source and destination side and checks after each iteration if the visited
+   Step 2 :-list from each side are intersecting at any point. If yes, then thats the meeting point and gives the
+   Step 3:-path from source to that point and from that point to destination. */
 
-#include <iostream>
-#include <vector>
-#include <list>
-#include <algorithm>
-#include <stdlib.h>
+#include<iostream>
+#include<vector>
+#include<list>
+#include<algorithm>
+#include<stdlib.h>
 using namespace std;
 
 class Graph
@@ -77,7 +77,7 @@ void Graph::BDS(int s, int t){
     BFS(&s_queue, s_visited, s_prev);
     //from back
     BFS(&t_queue, t_visited, t_prev);
-
+      cout<<"Mani at line 80";
     meet_pt = visitedIntersect(s_visited, t_visited);
     if(meet_pt != -1)
     {
@@ -96,6 +96,7 @@ void Graph::BFS(list<int> *queue, bool *visited, int *prev) {
   {
     if(!visited[*i])
     {
+      cout<<current;
       prev[*i] = current;
       visited[*i] = true;
       queue->push_back(*i);
@@ -104,12 +105,14 @@ void Graph::BFS(list<int> *queue, bool *visited, int *prev) {
 }
 void Graph::displayPathBDS(int s, int t, int *s_prev,int *t_prev, int m_pt)
 {
+  
   int p,q,pos,pathlen = 0;
   int *prev;
   vector<int> result;
   cout<<"\nPath is: ";
   int count = 2;
   prev = s_prev;
+    cout<<"Mani at line 114";
   while(count-->0)
   {
     p = m_pt;
@@ -151,25 +154,7 @@ void Graph::displayQueue(list<int> queue)
 
 int main()
 {
-  // int n,e, a, b, c;
-  // int vstart, vend;
-  // cout<<"No. of vertices:";
-  // cin>>n;
-  // cout<<"No. of edges:";
-  // cin>>e;
-  // Graph g(n);
-  // cout<<"Enter the list of edges in the format : v1 v2 weight:";
-  // for(int i = 0; i<e; i++)
-  // {
-  //   cin>>a>>b>>c;
-  //   g.addEdge(a, b, c);
-  // }
-  // cout<<"Enter the start vertex:";
-  // cin>>vstart;
-  // cout<<"Enter the end vertex:";
-  // cin>>vend;
-  // g.BFS(vend, vstart);
-
+  cout<<"Mani at line 154";
   int n = 16;
   Graph g(n);
   g.addEdge(0, 1, 12);
@@ -188,18 +173,8 @@ int main()
   g.addEdge(11, 14, 3);
   g.addEdge(11, 15, 3);
   g.BDS(0, 12);
-  // cout<<char(2);
+ 
   return 0;
 }
 
-/*
-g.addEdge(0, 1, 12);
-g.addEdge(0, 2, 8);
-g.addEdge(0, 3, 7);
-g.addEdge(1, 4, 8);
-g.addEdge(1, 5, 7);
-g.addEdge(2, 6, 6);
-g.addEdge(2, 7, 5);
-g.addEdge(3, 8, 4);
-g.addEdge(3, 9, 3);
-*/
+
