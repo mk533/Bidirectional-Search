@@ -177,4 +177,19 @@ int main()
   return 0;
 }
 
+/*
+Running on Linux/Unix System :-
+step 1 :- Open Terminal.
+step 2 :- Go to directory where file is saved
+step 3 :- Command for compile g++ filename.cpp
+step 4 :- Command to run ./a.out.
+
+output:- Results the shortest path lenght between two vertices
+*/
+
+/* Running in Microsoft Visual Studio :-
+
+If you want to build a sample with Microsoft Visual Studio, then you need to create a project and copy the sample into that project by your own.
+In order to build each sample, simply cd to its directory and run make to build the required executable. 
+Run make clean to clean-up your directory. Also make full, first cleans and then rebuilds each sample. */
 
